@@ -3,7 +3,7 @@
 # Also change it so the num_wheels defaults to 4 if not specified when the
 # object is constructed.
 
-from oop.oop1 import Motorcycle
+# from oop.oop1 import Motorcycle
 
 
 class GroundVehicle():
@@ -11,7 +11,7 @@ class GroundVehicle():
         self.num_wheels = num_wheels
 
     # TODO
-    def drive():
+    def drive(self):
         return "vroooom"
 
 # Subclass Motorcycle from GroundVehicle.
@@ -25,9 +25,10 @@ class GroundVehicle():
 
 
 class Motorcycle(GroundVehicle):
-    super().__init__(num_wheels=2)
+    def __init__(self):
+        super().__init__(num_wheels=2)
 
-    def drive():
+    def drive(self):
         return "BRAAAP!!"
 
 
